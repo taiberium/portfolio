@@ -21,10 +21,8 @@ public class PositionController {
     @GetMapping("{account}")
     public Flux<PositionDto> get(@PathVariable("account") String account) {
        return positionService.get(account)
-                .map(position -> new PositionDto(
-                                position,
-                                quoteRepository.get(position.getSymbol()).block()
-                        )
+                .flatMap(position ->
+                        quoteRepository.get(position.getSymbol()).map(quote -> new PositionDto(position, quote))
                 );
     }
 }

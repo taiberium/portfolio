@@ -2,7 +2,6 @@ package com.portfolio.model.dto;
 
 import com.portfolio.model.Position;
 import com.portfolio.model.Quote;
-import com.portfolio.model.PositionChange;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
