@@ -1,21 +1,21 @@
 package com.portfolio.model.dto;
 
+import com.portfolio.model.Instrument;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
-public class PositionChangeDto {
-
+public class InstrumentDto {
+    @NotEmpty
+    private String symbol;
     @NotNull
-    @Valid
-    private InstrumentDto instrument;
+    private Instrument.InstrumentType type;
 
-    @NotNull
-    private BigDecimal amount;
+    public enum InstrumentType {
+        CASH, SECURITY
+    }
 }

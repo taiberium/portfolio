@@ -16,8 +16,8 @@ public class Transaction {
     private String id;
     private String account;
     private Type type;
-    private PositionChange input;
-    private PositionChange output;
+    private PositionChange firstSide;
+    private PositionChange secondSide;
 
 
    public enum Type {

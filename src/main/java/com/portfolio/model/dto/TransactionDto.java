@@ -15,16 +15,17 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 public class TransactionDto {
 
+    private String id;
     @NotEmpty
     private String account;
     @NotNull
     private TypeDto type;
     @NotNull
     @Valid
-    private PositionChangeDto input;
+    private PositionChangeDto firstSide;
     @NotNull
     @Valid
-    private PositionChangeDto output;
+    private PositionChangeDto secondSide;
 
 
     public enum TypeDto {

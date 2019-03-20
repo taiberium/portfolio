@@ -1,4 +1,4 @@
-package com.portfolio.model.dto;
+package com.portfolio.model;
 
 import com.portfolio.model.Position;
 import com.portfolio.model.Quote;
@@ -7,7 +7,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class PositionDto {
+public class PortfolioPosition {
 
     private final Position position;
     private final Quote quote;

@@ -11,7 +11,6 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class Position {
 
-    private String symbol;
+    private Instrument instrument;
     private BigDecimal amount;
-
 }
